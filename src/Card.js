@@ -6,8 +6,14 @@ import React from "react";
     code: "KH"
   App => GameBoard => Card
  */
-function Card({image,code}){
-  return <img src={image} alt={code} id={code} />;
+function Card({ image, code, angle }) {
+  return <img 
+    className="Card position-absolute"
+    src={image} 
+    alt={code} 
+    id={code} 
+    style={{transform: `rotate(${angle}deg)`}} />;
 }
+
 
 export default Card;
